@@ -11,6 +11,9 @@ app.use(express.json())
 
 app.use("/user" , userRouter)
 app.use("/notes", noteRouter)
+app.get("/",(req,res)=>{
+    res.send({"msg" : "this is Home Route!"})
+})
 
 app.listen(process.env.PORT, async()=>{
     try {
